@@ -1,6 +1,8 @@
 <h1>Articles</h1>
 
-<%= link_to "Create article", new_article_path %>
+Our blog has <%= Article.public_count %> articles and counting!
+
+<%= link_to "Click here", new_article_path %> to create a new one :)
 
 <ul>
     <% @articles.each do |article| %>
