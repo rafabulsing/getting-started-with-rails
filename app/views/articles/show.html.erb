@@ -21,19 +21,4 @@
 <%= render @article.comments %>
 
 <h2>Add a comment:</h2>
-
-<%= form_with model: [ @article, @article.comments.build ] do |form| %>
-    <p>
-        <div><%= form.label :commenter %></div>
-        <%= form.text_field :commenter %>
-    </p>
-
-    <p>
-        <div><%= form.label :body %></div>
-        <%= form.text_field :body %>
-    </p>
-
-    <p>
-        <%= form.submit %>
-    </p>
-<% end %>
+<%= render 'comments/form' %>
